@@ -31,13 +31,11 @@ class Slacker
         }
 
         $message = sprintf(
-            "%s (%s) :flag-%s: vs. :flag-%s: %s (%s) has kicked off! :tada:",
+            "%s :flag-%s: vs. :flag-%s: %s has kicked off! :tada:",
             $match->homeTeam->name,
-            $match->homeTeam->buildSlackName(),
             $match->homeTeam->flagCode,
             $match->awayTeam->flagCode,
             $match->awayTeam->name,
-            $match->awayTeam->buildSlackName(),
         );
 
         $this->sendMessage($message);
@@ -59,14 +57,14 @@ class Slacker
 
         switch ($match->winner) {
             case 'HOME_TEAM':
-                $comment = "Congratulations {$match->homeTeam->buildSlackName()} :tada:";
+                $comment = ":tada:";
                 break;
             case 'AWAY_TEAM':
-                $comment = "Congratulations {$match->awayTeam->buildSlackName()} :tada:";
+                $comment = ":tada:";
                 break;
             case 'DRAW':
             default:
-                $comment = "It's a draw! :steamed-hams:";
+                $comment = "It's a draw! :scaredhamster:";
         }
 
         $message = sprintf(
