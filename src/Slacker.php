@@ -31,7 +31,7 @@ class Slacker
         }
 
         $message = sprintf(
-            "%s :flag-%s: vs. :flag-%s: %s has kicked off! :tada:",
+            "%s :flag-%s: vs. :flag-%s: %s has kicked off! :soccer:",
             $match->homeTeam->name,
             $match->homeTeam->flagCode,
             $match->awayTeam->flagCode,
@@ -57,10 +57,10 @@ class Slacker
 
         switch ($match->winner) {
             case 'HOME_TEAM':
-                $comment = ":tada:";
+                $comment = " Game Over :eslcsgg:";
                 break;
             case 'AWAY_TEAM':
-                $comment = ":tada:";
+                $comment = " Game Over :eslcsgg:";
                 break;
             case 'DRAW':
             default:
@@ -68,7 +68,7 @@ class Slacker
         }
 
         $message = sprintf(
-            "%s :flag-%s: %d : %d :flag-%s: %s! %s",
+            "%s :flag-%s: %d : %d :flag-%s: %s | %s",
             $match->homeTeam->name,
             $match->homeTeam->flagCode,
             $match->homeScore,
