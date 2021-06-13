@@ -57,10 +57,10 @@ class Slacker
 
         switch ($match->winner) {
             case 'HOME_TEAM':
-                $comment = " Game Over :eslcsgg:";
+                $comment = "Game Over :eslcsgg:";
                 break;
             case 'AWAY_TEAM':
-                $comment = " Game Over :eslcsgg:";
+                $comment = "Game Over :eslcsgg:";
                 break;
             case 'DRAW':
             default:
